@@ -8,7 +8,7 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
       <ul className="pagination">
         {currentPage > 3 ? (
           <li key={1} className="pagination__list">
-            <a onClick={() => paginate(1)} href="!#">
+            <a onClick={() => paginate(1)} href="/">
               first page
             </a>
           </li>
@@ -16,7 +16,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
 
         {currentPage > 2 ? (
           <li key={currentPage - 2} className="pagination__list">
-            <a onClick={() => paginate(currentPage - 2)} href="!#">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(currentPage - 2)
+              }}
+              href="/"
+            >
               {currentPage - 2}
             </a>
           </li>
@@ -24,7 +30,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
 
         {currentPage > 1 ? (
           <li key={currentPage - 1} className="pagination__list">
-            <a onClick={() => paginate(currentPage - 1)} href="!#">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(currentPage - 1)
+              }}
+              href="/"
+            >
               {currentPage - 1}
             </a>
           </li>
@@ -34,7 +46,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
 
         {currentPage < pageNumbers ? (
           <li key={currentPage + 1} className="pagination__list">
-            <a onClick={() => paginate(currentPage + 1)} href="!#">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(currentPage + 1)
+              }}
+              href="/"
+            >
               {currentPage + 1}
             </a>
           </li>
@@ -42,7 +60,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
 
         {currentPage < pageNumbers - 1 ? (
           <li key={currentPage + 2} className="pagination__list">
-            <a onClick={() => paginate(currentPage + 2)} href="!#">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(currentPage + 2)
+              }}
+              href="/"
+            >
               {currentPage + 2}
             </a>
           </li>
@@ -50,7 +74,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
 
         {currentPage < pageNumbers - 2 ? (
           <li key={pageNumbers} className="pagination__list">
-            <a onClick={() => paginate(pageNumbers)} href="!#">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(pageNumbers)
+              }}
+              href="/"
+            >
               last page
             </a>
           </li>
