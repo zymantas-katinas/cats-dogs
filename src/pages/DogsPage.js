@@ -3,7 +3,7 @@ import FactsList from "../components/FactsList"
 
 function DogsPage() {
   return (
-    <div className="DogsPage">
+    <div className="DogsPage container">
       <FactsList />
     </div>
   )
