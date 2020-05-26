@@ -228,5 +228,8 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .loaderGif img {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

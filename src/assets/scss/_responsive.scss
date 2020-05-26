@@ -9,4 +9,9 @@
     font-size: 4rem;
     flex-direction: column;
   }
+  .loaderGif {
+    & img {
+      width: 70%;
+    }
+  }
 }
