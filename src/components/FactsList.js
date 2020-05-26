@@ -18,7 +18,7 @@ const FactsList = (props) => {
       setData(result.data.all)
       setTimeout(() => {
         setLoading(false)
-      }, 1000)
+      }, 1500)
     }
     fetchData()
   }, [])
@@ -34,9 +34,15 @@ const FactsList = (props) => {
   return loading ? (
     <div className="loaderGif">
       {animal === "cat" ? (
-        <img src="https://media.giphy.com/media/mFTRCmlZgMEr5CHmOV/giphy.gif"></img>
+        <img
+          src="https://media.giphy.com/media/mFTRCmlZgMEr5CHmOV/giphy.gif"
+          alt="loading"
+        ></img>
       ) : (
-        <img src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_dog.gif"></img>
+        <img
+          src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_dog.gif"
+          alt="loading"
+        ></img>
       )}
     </div>
   ) : (

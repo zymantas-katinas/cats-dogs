@@ -1,2 +1,12 @@
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 50px 20px;
+  }
+  .factsList h1 {
+    font-size: 2rem;
+  }
+  .startScreen h1 {
+    font-size: 4rem;
+    flex-direction: column;
+  }
 }

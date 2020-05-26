@@ -74,8 +74,7 @@ body {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding-right: 3px;
-  padding-left: 3px;
+  padding: 100px 50px;
 }
 
 .startScreen {
@@ -96,6 +95,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #383c43;
 }
 
@@ -114,7 +118,6 @@ body {
 }
 
 .factsList {
-  padding: 100px 50px;
   text-align: center;
   color: #383c43;
 }
@@ -199,19 +202,31 @@ body {
 }
 
 .loaderGif {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
 }
 
 .loaderGif img {
-  width: 20%;
+  width: 35%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 50px 20px;
+  }
+  .factsList h1 {
+    font-size: 2rem;
+  }
+  .startScreen h1 {
+    font-size: 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */
