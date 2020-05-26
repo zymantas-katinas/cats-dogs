@@ -8,7 +8,13 @@ const Pagination = ({ factsPerPage, totalFacts, currentPage, paginate }) => {
       <ul className="pagination">
         {currentPage > 3 ? (
           <li key={1} className="pagination__list">
-            <a onClick={() => paginate(1)} href="/">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                paginate(1)
+              }}
+              href="/"
+            >
               first page
             </a>
           </li>
